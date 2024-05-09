@@ -10,7 +10,6 @@ def check(xState, zState):
     for win in wins:
         if xState[win[0]] == xState[win[1]] == xState[win[2]] == 1:
             print("X WON !!!!!!!!")
-            printBoard()
             return True
         if zState[win[0]] == zState[win[1]] == zState[win[2]] == 1:
             print("O WON !!!!!!!!")
@@ -38,7 +37,7 @@ if __name__ == "__main__":
             zState[value] = 1
             turn = 1
         cwin=check(xState,zState)
-        if cwin !=-1:
+        if cwin:
             print('Match Over')
             break
         
